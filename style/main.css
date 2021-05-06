@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'poppins', sans-serif;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 20px #ffcd9e; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff7a00; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9a3b; 
+}
+header {
+  /* position: fixed; */
+  width: 100%;
+  height: 80px;
+  padding: 0 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffcd9e;
+  z-index: 1000;
+}
+header .logo {
+  color: #ffe9db;
+  font-size: 30px;
+  background-color: #ff7a00;
+  text-decoration: none;
+  letter-spacing: 2px;
+  padding: 4px 8px ;
+  font-weight: 700;
+}
+header ul {
+  position: relative;
+  display: flex;
+}
+header ul li {
+  position: relative;
+  list-style: none;
+}
+header ul li a {
+  position: relative;
+  padding: 5px 10px;
+  color: #000;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+header ul li a.active,
+header ul li a:hover {
+  color: #ff7a00;
+}
+header .cart-icon {
+  padding: 8px 16px;
+  background-color: #ff9a3b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+}
+.toggle {
+  display: none;
+}
+section {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between; */
+  align-items: center;
+  min-height: 90vh;
+  /* padding: 150px 100px 100px; */
+}
+.grid {
+  display: flex;
+  flex-direction: row;
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  justify-content: center;
+  align-items: center;
+  /* padding: 150px 100px 100px; */
+  margin: 0 8rem;
+}
+
+.hero img {
+  width: 100%;
+}
+
+
+.hero h1 {
+  color: #ff7a00;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 4rem;
+  width: 100%;
+  margin-left: 5rem;
+}
+#home {
+  background-color: #ffcd9e;
+}
+.cta a {
+  position: absolute;
+  bottom: -10px;
+  display: inline-block;
+  background-color: #ff9a3b;
+  color: #ffe9db;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 100px;
+  border-radius: 5px;
+  z-index: 1;
+}
+.cta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+      padding: 0 30px;
+  }
+  .grid {
+    flex-direction: column-reverse;
+    margin: 0 1rem;
+  }
+  .hero h1 {
+    text-align: justify;
+    margin-left: 0;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+  header ul {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      padding: 50px 100px;
+      text-align: center;
+      overflow: hidden;
+      transition: 0.5s;
+      background: #ffcd9e;
+      flex-direction: column;
+      opacity: 0;
+      transform: translateY(-100%);
+      z-index: 2;
+  }
+  header.active ul {
+      opacity: 1;
+      top: 100px;
+      transform: translateY(0);
+  }
+  header ul li a {
+      margin: 5px;
+      font-size: 24px;
+      color: #ffe9db;
+  }
+  .toggle {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+  }
+  .toggle:before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      z-index: 1;
+      box-shadow: 0 10px 0 #fff;
+      transition: 0.5s;
+  }
+  .toggle:after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      z-index: 1;
+      transition: 0.5s;
+  }
+  header.active .toggle:before {
+      top: 14px;
+      transform: rotate(45deg);
+      box-shadow: 0 0 0 #fff;
+  }
+  header.active .toggle:after {
+      bottom: 14px;
+      transform: rotate(-45deg);
+  }
+  .cta a {
+    bottom: -70px;
+  }
+}
+/* @media (max-width: 1024px) {
+  section {
+    min-height: 60vh;
+  }
+  .hero h1 {
+    margin-left: 2rem;
+    font-size: 1rem;
+  } 
+} */

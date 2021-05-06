@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ecommerce-website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/style/main.css" />
+  </head>
+  <body>
+    <header id="header">
+      <a href="#" class="logo">EMC</a>
+      <ul>
+        <li><a href="#home" onclick="toggle()">Home</a></li>
+        <li><a href="#about" onclick="toggle()">About</a></li>
+        <li><a href="#service" onclick="toggle()">Service</a></li>
+      </ul>
+      <a href="#" class="cart-icon"
+        ><i class="fas fa-shopping-cart"><span> 0</span></i></a
+      >
+      <div class="toggle" onclick="toggle()"></div>
+    </header>
+    <section id="home">
+      <div class="grid hero">
+        <div>
+          <h1>the e-millenial store</h1>
+        </div>
+        <div>
+          <img src="/asset/heroImage.png" alt="" />
+        </div>
+      </div>
+      <div class="cta">
+        <a href="#">SHOP NOW</a>
+      </div>
+    </section>
+    <section id="about">
+      <div>
+        <h2>About Us</h2>
+      </div>
+    </section>
+    <section id="service">
+      <div>
+        <h2>Our Services</h2>
+      </div>
+    </section>
+    <section id="porfolio">
+      <div>
+        <h2>Our Recent Work</h2>
+      </div>
+    </section>
+    <script type="text/javascript">
+      function toggle() {
+        var header = document.getElementById("header");
+        header.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
