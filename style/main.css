@@ -1,9 +1,11 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -80,10 +82,10 @@ section {
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between; */
   align-items: center;
-  min-height: 90vh;
+  /* min-height: 90vh; */
   /* padding: 150px 100px 100px; */
 }
-.grid {
+.flex {
   display: flex;
   flex-direction: row;
   /* display: grid;
@@ -96,12 +98,14 @@ section {
 
 .hero img {
   width: 100%;
+  margin-bottom: 3rem;
 }
 
 
 .hero h1 {
   color: #ff7a00;
   letter-spacing: 1px;
+  line-height: 1.2;
   text-transform: uppercase;
   font-size: 4rem;
   width: 100%;
@@ -109,10 +113,11 @@ section {
 }
 #home {
   background-color: #ffcd9e;
+  padding-bottom: 2rem;
 }
 .cta a {
   position: absolute;
-  bottom: -10px;
+  bottom: 30px;
   display: inline-block;
   background-color: #ff9a3b;
   color: #ffe9db;
@@ -128,18 +133,65 @@ section {
   justify-content: center;
 }
 
+/* styliing for the about section */
+#about {
+  background-color: #000;
+  color: #ffe9db;
+}
+#about p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 6rem 5rem;
+}
+
+/* styling for the gadgets section */
+#service {
+  text-align: center;
+  margin: 0 8rem;
+}
+#service h2 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.gadget-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.gadget-card h3{
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: 0.1rem;
+}
+.gadget-card input {
+  padding: 0.7rem 1.7rem;
+  font-weight: 500;
+  background-color: #ff7a00;
+  border: none;
+  border-radius: 0.2rem;
+  letter-spacing: 0.11rem;
+}
+
 @media only screen and (max-width: 768px) {
   header {
       padding: 0 30px;
   }
-  .grid {
+  .flex {
     flex-direction: column-reverse;
     margin: 0 1rem;
+  }
+  .hero img {
+    margin-bottom: 0;
   }
   .hero h1 {
     text-align: justify;
     margin-left: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 7rem;
     font-size: 1.2rem;
   }
   header ul {
@@ -206,7 +258,19 @@ section {
       transform: rotate(-45deg);
   }
   .cta a {
-    bottom: -70px;
+    bottom: 40px;
+  }
+  #about p {
+    font-size: 1.4rem;
+    margin: 2rem 1rem;
+    text-align: center;
+  }
+  .gadget-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  #service {
+    margin: 0;
   }
 }
 /* @media (max-width: 1024px) {
